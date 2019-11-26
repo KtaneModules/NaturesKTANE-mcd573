@@ -1,4 +1,6 @@
-﻿using System.Linq;
+﻿using System.Collections;
+using System.Linq;
+using System.Text.RegularExpressions;
 using KModkit;
 using UnityEngine;
 using Rnd = UnityEngine.Random;
@@ -150,5 +152,20 @@ public class mcdNaturesModule : MonoBehaviour
         }
         _displayedNature = (_displayedNature + 1) % _natureOrder.Length;
         UpdateDisplayedNature();
+    }
+
+#pragma warning disable 414
+    private readonly string TwitchHelpMessage = @"!{0} battle | !{0} rebreed";
+#pragma warning restore 414
+
+    KMSelectable[] ProcessTwitchCommand(string command)
+    {
+        if (Regex.IsMatch(command, @"^\s*battle!?\s*$", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant))
+            return new[] { BattleButton };
+
+        if (Regex.IsMatch(command, @"^\s*re-?breed\s*$", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant))
+            return new[] { RebreedButton };
+
+        return null;
     }
 }
