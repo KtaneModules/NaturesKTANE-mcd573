@@ -14,7 +14,20 @@ MonoBehaviour:
   id: mcdNatures
   title: Natures
   author: mcd573
-  description: My first module, inspired by the Nature mechanic of Pokemon.
+  description: 'My first module, inspired by the Nature mechanic of Pokemon.
+
+
+    moduleID: mcdNatures
+
+
+    Designed and Modeled by mcd573
+
+    Scripting/Editing by Timwi
+
+
+    HTML Manual: ktane.timwi.de/HTML/Natures.html
+
+    PDF Manual: ktane.timwi.de/PDF/Natures.pdf/'
   version: 
   outputFolder: build
   previewImage: {fileID: 0}
