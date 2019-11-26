@@ -30,4 +30,4 @@ MonoBehaviour:
     PDF Manual: ktane.timwi.de/PDF/Natures.pdf/'
   version: 
   outputFolder: build
-  previewImage: {fileID: 0}
+  previewImage: {fileID: 2800000, guid: 4c07339330b10a94fbe7bb8778124736, type: 3}
