@@ -138,6 +138,7 @@ public class mcdNaturesModule : MonoBehaviour
             Debug.LogFormat(@"[Natures #{0}] Selected “Battle!” when the nature was correct. Module solved.", _moduleId);
             Module.HandlePass();
             _isSolved = true;
+			Audio.PlaySoundAtTransform("moduleSolve", transform);
         }
         else
         {
