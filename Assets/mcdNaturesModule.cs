@@ -133,6 +133,9 @@ public class mcdNaturesModule : MonoBehaviour
         Audio.PlayGameSoundAtTransform(KMSoundOverride.SoundEffect.ButtonPress, BattleButton.transform);
         BattleButton.AddInteractionPunch();
 
+        if (_isSolved)
+            return;
+
         if (_expectedChildNature == _natureOrder[_displayedNature])
         {
             Debug.LogFormat(@"[Natures #{0}] Selected “Battle!” when the nature was correct. Module solved.", _moduleId);
@@ -151,6 +154,9 @@ public class mcdNaturesModule : MonoBehaviour
     {
         Audio.PlayGameSoundAtTransform(KMSoundOverride.SoundEffect.ButtonPress, RebreedButton.transform);
         RebreedButton.AddInteractionPunch();
+
+        if (_isSolved)
+            return;
 
         if (_expectedChildNature == _natureOrder[_displayedNature])
         {
