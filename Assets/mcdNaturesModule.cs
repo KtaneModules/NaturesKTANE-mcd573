@@ -168,7 +168,7 @@ public class mcdNaturesModule : MonoBehaviour
     }
 
 #pragma warning disable 414
-    private readonly string TwitchHelpMessage = @"!{0} battle | !{0} rebreed";
+    private readonly string TwitchHelpMessage = @"!{0} battle to submit the current nature. | !{0} rebreed to re-breed once.";
 #pragma warning restore 414
 
     KMSelectable[] ProcessTwitchCommand(string command)
